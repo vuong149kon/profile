@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Birthstone&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <div class="header__name">Đặng Đỗ Việt Vương</div>
+    </header>
+
+    <main>
+        <div class="intro warp">
+            <div class="intro__watermark">Đặng Đỗ Việt Vương</div>
+            <div class="intro__img--warp">
+              
+                <img class="intro__img--item active" src="https://cdn.glitch.com/0cc1bb25-b661-4051-8a7f-a315c85af7b9%2Fanh%20ca%20nhan.png?v=1633015502648"></img>
+                <img class="intro__img--item" src="https://cdn.glitch.me/0cc1bb25-b661-4051-8a7f-a315c85af7b9%2Fimg2.png?v=1634119904722"></img>
+      
+            </div>
+
+            <div class="line__introimg">
+                <div class="line__introimg--ele active"></div>
+                <div class="line__introimg--ele"></div>
+            </div>
+            
+            <script>
+                const $ = document.querySelector.bind(document)
+                const $$ = document.querySelectorAll.bind(document)
+
+                const myImgs = $$('.intro__img--item')
+                const lines = $$('.line__introimg--ele')
+                var delay = 5000                
+                    // setInterval(
+                    //     function(){
+                    //     myImgs.forEach(element =>{
+                    //         element.classList.toggle('active')
+                    //     })
+                    //     }
+                    //     ,delay)
+                    // setInterval(
+                    //     function(){
+                    //     lines.forEach(element =>{
+                    //         element.classList.toggle('active')
+                    //     })
+                    //     }
+                    //     ,delay)    
+                
+              var autoChange = setInterval(
+                function(){
+                  myImgs.forEach(element =>{
+                    element.classList.toggle('active')
+                    })
+                  lines.forEach(element =>{
+                    element.classList.toggle('active')
+                    })
+                }
+                ,5000);
+              
+                lines.forEach(function(line,index) {
+                    const myImg = myImgs[index];
+                    line.onclick = function(){
+                      myImgs[1-index].classList.remove('active');
+                      lines[1-index].classList.remove('active')
+                      this.classList.add('active')
+                      myImg.classList.add('active');
+                      
+                    
+                      
+                    } 
+                });   
+              
+            </script>
+
+                <div class="intro__header">
+                    <div class="intro__header--myname">Đặng Đỗ Việt Vương</div>
+                    <ul class="intro__header--porperty">
+                       <li class="intro__header--porperty-item">home</li> 
+                       <li class="intro__header--porperty-item">page</li> 
+                       <li class="intro__header--porperty-item">portfolio</li> 
+                       <li class="intro__header--porperty-item">about me</li> 
+                    </ul>
+                </div>
+            <div class="intro__person">
+                <div class="intro__person--content">
+                    <i class="fas fa-quote-left intro__person--content--icon"></i>
+                    <div class="intro__person--content--main">
+                        Là 1 học sinh có hơn 12 năm kinh nghiệm mài đũng quần trên ghế nhà trường
+                    </div>
+                </div>
+                <div class="intro__person--slogan">
+                    Slogan: "Tuổi trẻ là trải nghiệm"
+                </div>
+            </div>
+            <div class="intro__footer">
+                <a href="https://www.facebook.com/dangdovietvuong" target="blank_"><i class="fab fa-facebook"></i></a>
+                <a href="mailto:vuong.pt.149@gmail.com" target="blank_"><i class="fab fa-google-plus"></i></a>
+                <i class="fab fa-viber"></i>
+            </div>
+        </div>
+       
+        <div class="slide">
+            <div class="slide__warp">
+                <div class="slide__title">PERSONAL INFORMATION</div>
+                  <ul class="slide__content">
+                    <li>Ngày sinh: 14/9/2003</li>
+                    <li>Lớp: K57P3 TMU (Khoa Luật Kinh Tế)</li>
+                    <li>Giới tính: Nam</li>
+                    <li>Sở thích: Đọc sách, xem phim, tìm tòi, khám phá những cái mới; 
+                        đam mê với đồ ăn nhưng lại không có tiền</li>
+                    <li>Tài năng: Học hỏi nhanh</li>
+                </ul>
+            </div>
+            <img src="https://cdn.glitch.com/0cc1bb25-b661-4051-8a7f-a315c85af7b9%2Fimagine%20if%20books%20could%20talk%2C%20how%20loud%20would%20it%20be%20in%20a%20library_.jpg?v=1633015529895" alt="" class="slide__img">
+        </div>
+            
+        </div>
+        <div class="content">
+            <div class="content__title">MỘT SỐ KHẢ NĂNG</div>
+            <div class="content__list">
+                <div class="content__item">
+                    <div class="content__item--text">Biết chơi guitar, hát</div>
+                    <div class="content__item--text">(đã quên gần hết)</div>
+                    <img src="https://cdn.glitch.com/0cc1bb25-b661-4051-8a7f-a315c85af7b9%2Fguitar.jpg?v=1633015531210" class="content__item__bonus" alt="">
+                </div>
+                <div class="content__item">
+                    <div class="content__item--text">Làm MC cho 1 số chương trình của trường</div>
+                    <img src="https://cdn.glitch.com/0cc1bb25-b661-4051-8a7f-a315c85af7b9%2FMC.jpg?v=1633015552155" class="content__item__bonus" alt="">
+                </div>
+                <div class="content__item">
+                    <div class="content__item--text">Sử dụng 5 thứ tiếng</div>
+                    <div class="content__item--text">(60% là ngôn ngữ máy)</div>
+                    <img src="https://cdn.glitch.com/0cc1bb25-b661-4051-8a7f-a315c85af7b9%2Fcoder.jpg?v=1633015506425" class="content__item__bonus" alt="">
+                </div>
+                <div class="content__item">
+                    <div class="content__item--text">Học lỏm được 1 chút kiến thức về thiết kế</div>
+                    <img src="https://cdn.glitch.com/0cc1bb25-b661-4051-8a7f-a315c85af7b9%2Fphotoshop.jpg?v=1633015557897" class="content__item__bonus" alt="">
+                </div>
+            </div>
+        </div>
+    </main> 
+
+    <footer>
+        <div class="footer__title">Mong muốn được tham gia CLB</div>
+        <div class="footer__body">Hãy để mình góp 1 phần công sức vào CLB. mình mong muốn 
+            có thể giao luu kết nối với những người bạn, người anh, người chị thú vị, muốn tuổi
+            trẻ của mình thật có ích 
+        </div>
+    </footer>
+</body>
+</html>
